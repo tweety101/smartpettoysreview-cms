@@ -1,0 +1,49 @@
+{
+  "connection": "default",
+  "collectionName": "post",
+  "info": {
+    "name": "post",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "default": "",
+      "type": "string"
+    },
+    "Content": {
+      "default": "",
+      "type": "text"
+    },
+    "Cover": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "Scraped Review Results": {
+      "default": "",
+      "type": "json"
+    },
+    "Review Source URL 1": {
+      "default": "",
+      "type": "string"
+    },
+    "Review Source URL 2": {
+      "default": "",
+      "type": "string"
+    },
+    "Review Source URL 3": {
+      "default": "",
+      "type": "string"
+    },
+    "Slug": {
+      "default": "",
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

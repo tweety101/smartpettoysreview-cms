@@ -1,0 +1,77 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "reviewpost",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "slug": {
+      "default": "",
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "SEO Title": {
+      "default": "",
+      "maxLength": 70,
+      "type": "string",
+      "required": true
+    },
+    "SEO Description": {
+      "default": "",
+      "maxLength": 300,
+      "type": "string"
+    },
+    "Date": {
+      "default": "",
+      "type": "date",
+      "required": true
+    },
+    "Featured Image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "Content": {
+      "default": "",
+      "type": "text"
+    },
+    "Tag": {
+      "default": "Everything",
+      "type": "enumeration",
+      "enum": [
+        "Pet Care",
+        " Training",
+        " Toys",
+        " Breeds",
+        " Cameras",
+        " Supplies"
+      ]
+    },
+    "Review Source URL 1": {
+      "default": "",
+      "type": "string"
+    },
+    "Review Source URL 2": {
+      "default": "",
+      "type": "string"
+    },
+    "Review Source URL 3": {
+      "default": "",
+      "type": "string"
+    },
+    "Review Source URL 4": {
+      "default": "",
+      "type": "string"
+    },
+    "Scraped Reviews": {
+      "default": "",
+      "type": "json"
+    }
+  }
+}
